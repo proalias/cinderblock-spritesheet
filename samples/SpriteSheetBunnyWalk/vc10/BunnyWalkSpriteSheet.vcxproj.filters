@@ -46,5 +46,19 @@
     <ClInclude Include="..\..\..\src\SpriteSheet.h">
       <Filter>blocks\SpriteSheet</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\resources\bunny.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\resources\background.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\resources\background.png">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
