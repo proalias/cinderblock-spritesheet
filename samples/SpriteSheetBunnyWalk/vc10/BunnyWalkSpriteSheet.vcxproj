@@ -123,6 +123,7 @@
     <None Include="..\resources\background.jpg" />
     <None Include="..\resources\background.png" />
     <None Include="..\resources\bunny.png" />
+    <None Include="cinder_app_icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
