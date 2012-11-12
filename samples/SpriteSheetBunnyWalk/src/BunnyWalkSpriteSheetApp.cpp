@@ -8,7 +8,7 @@
 #include "SpriteSheet.h"
 #include <stdio.h>
 
-#include "../resources/Resources.h"
+#include "../include/Resources.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -33,7 +33,7 @@ void BunnyWalkSpriteSheetApp::setup()
 	
 	bunnyWalkTexture = loadImage(loadResource(IDB_PNG2 ));
 	bunnyWalk = SpriteSheet();
-	bunnyWalk.init(bunnyWalkTexture, "./bunny.xml", SpriteSheet::FORMAT_TEXTUREPACKER_GENERIC_XML);
+	bunnyWalk.init(bunnyWalkTexture, "../resources/bunny.xml", SpriteSheet::FORMAT_TEXTUREPACKER_GENERIC_XML);
 
 
 	bunnyWalk.x = 600.0f;
