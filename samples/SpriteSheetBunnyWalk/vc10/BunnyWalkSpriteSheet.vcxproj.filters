@@ -28,11 +28,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resources.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\src\SpriteData.h">
       <Filter>blocks\SpriteSheet</Filter>
     </ClInclude>
@@ -42,19 +37,15 @@
     <ClInclude Include="..\..\..\src\SpriteSheet.h">
       <Filter>blocks\SpriteSheet</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\resources\Resources.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\resources\bunny.png">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\resources\background.jpg">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="..\resources\background.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="cinder_app_icon.ico">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

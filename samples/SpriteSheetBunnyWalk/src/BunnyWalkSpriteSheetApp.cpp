@@ -3,9 +3,12 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
 #include "cinder/Easing.h"
+#include "cinder/CinderResources.h"
 
 #include "SpriteSheet.h"
 #include <stdio.h>
+
+#include "../resources/Resources.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -26,11 +29,9 @@ class BunnyWalkSpriteSheetApp : public AppBasic {
 void BunnyWalkSpriteSheetApp::setup()
 {
 
-	//
-//#define RES_LOGO    CINDER_RESOURCE( ../resources/, Logo.jpg, 128, IMAGE )
-	backgroundTexture = loadImage(loadResource("../resources/background.jpg", IDB_PNG2,"SPRITE1" ));
+	backgroundTexture = loadImage(loadResource(IDB_PNG1 ));
 	
-	bunnyWalkTexture = loadImage(loadResource( "../resources/bunny.png", IDB_PNG1,"SPRITE2"  ));
+	bunnyWalkTexture = loadImage(loadResource(IDB_PNG2 ));
 	bunnyWalk = SpriteSheet();
 	bunnyWalk.init(bunnyWalkTexture, "./bunny.xml", SpriteSheet::FORMAT_TEXTUREPACKER_GENERIC_XML);
 

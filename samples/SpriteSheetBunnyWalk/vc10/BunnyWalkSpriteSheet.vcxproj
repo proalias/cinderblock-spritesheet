@@ -43,8 +43,8 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\include;..\..\..\..\..\include;..\..\..\..\..\boost;..\..\..\..\..\blocks\cinderblock-spritesheet;%(AdditionalIncludeDirectories);$(IncludePath)</IncludePath>
-    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\mlawrenc\Desktop\cinder\cinder_0.8.4_vc2010\blocks\cinderblock-spritesheet\samples\SpriteSheetBunnyWalk\resources;$(SourcePath)</SourcePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\include;..\..\..\..\..\include;..\..\..\..\..\boost;..\..\..\..\..\blocks\cinderblock-spritesheet;%(AdditionalIncludeDirectories);C:\cinder\cinder_0.8.4_vc2010\blocks\cinderblock-spritesheet-master\src;$(IncludePath)</IncludePath>
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\resources;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -111,19 +111,14 @@
     <ClCompile Include="..\src\BunnyWalkSpriteSheetApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resources.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\src\SpriteData.h" />
     <ClInclude Include="..\..\..\src\SpriteDataParser.h" />
     <ClInclude Include="..\..\..\src\SpriteSheet.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\resources\Resources.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\resources\background.jpg" />
     <None Include="..\resources\background.png" />
     <None Include="..\resources\bunny.png" />
-    <None Include="cinder_app_icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
