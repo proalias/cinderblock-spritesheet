@@ -29,7 +29,7 @@ class BunnyWalkSpriteSheetApp : public AppBasic {
 void BunnyWalkSpriteSheetApp::setup()
 {
 
-	backgroundTexture = loadImage(loadResource(IDB_PNG1 ));
+	backgroundTexture = loadImage(loadResource("../resources/bunny.png",IDB_PNG1 ));
 	
 	bunnyWalkTexture = loadImage(loadResource(IDB_PNG2 ));
 	bunnyWalk = SpriteSheet();
