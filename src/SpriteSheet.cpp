@@ -15,7 +15,7 @@ void SpriteSheet::init(ci::gl::Texture spriteImage, std::string xmlPath, int Dat
 		x = 0;
 		y = 0;
 		scale = 1.0;
-		rotation = 0;
+		rotation = 0.0;
 		alpha = 1.0;
 
 }
@@ -65,8 +65,9 @@ void SpriteSheet::draw(){
 	verts[3*2+0] = rect.getX1(); texCoords[3*2+0] = u/__textureWidth;;
 	verts[3*2+1] = rect.getY2(); texCoords[3*2+1] = t/__textureHeight;;
 
+	gl::color(cinder::ColorA(alpha,alpha,alpha,alpha));
 	glDrawArrays( GL_TRIANGLE_STRIP, 0, 4 );
-
+	gl::color(cinder::ColorA(1.0,1.0,1.0,1.0));
 	__spriteImage.disable();
 	__spriteImage.unbind();
 

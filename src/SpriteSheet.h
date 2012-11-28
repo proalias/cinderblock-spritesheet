@@ -2,9 +2,9 @@
 #define SpriteSheet_h
 
 
-#include "cinder\Cinder.h"
-#include "cinder\gl\Texture.h"
-#include "cinder\Xml.h"
+#include "cinder/Cinder.h"
+#include "cinder/gl/Texture.h"
+#include "cinder/Xml.h"
 #include "cinder/Timeline.h"
 #include <stdio.h>
 

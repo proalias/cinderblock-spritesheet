@@ -39,7 +39,8 @@ void BunnyWalkSpriteSheetApp::setup()
 	bunnyWalk.x = 600.0f;
 	bunnyWalk.y = 100.0f;
 
-	timeline().apply(&bunnyWalk.x, 600.0f,-200.f,5.0f,ci::EaseNone()).loop(true);
+	timeline().apply(&bunnyWalk.x, 600.0f,-200.0f,5.0f,ci::EaseNone()).loop(true);
+	timeline().apply(&bunnyWalk.alpha, 0.0f,1.0f,5.0f,ci::EaseNone()).loop(true);
 }
 
 
