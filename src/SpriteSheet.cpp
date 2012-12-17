@@ -17,7 +17,12 @@ void SpriteSheet::init(ci::gl::Texture spriteImage, std::string xmlPath, int Dat
 		scale = 1.0;
 		rotation = 0;
 		alpha = 1.0;
+		width = __spriteData[0].w;
+		height = __spriteData[0].h;
 
+		isPlaying = true;
+		reverse = false;
+		loop = true;
 }
 
 void SpriteSheet::draw(){
@@ -80,7 +85,33 @@ void SpriteSheet::draw(){
 }
 
 void SpriteSheet::update(){
-	__currentFrame = (__currentFrame +=1) % __totalFrames;
+	if (isPlaying == true){
+		if (reverse == true)
+		{
+		__currentFrame = (__currentFrame -=1) % __totalFrames;
+		}
+		else if (reverse == false)
+		{
+		__currentFrame = (__currentFrame +=1) % __totalFrames;
+		}
+
+		width = __spriteData[__currentFrame].w;
+		height = __spriteData[__currentFrame].h;
+		
+		if (loop == false){
+			if (__currentFrame == __totalFrames -1){
+				isPlaying = false;
+			}
+		}
+
+		for (int i = 0;i<stopAtFrames.size();i++)
+		{
+			if (__currentFrame == stopAtFrames[i]){
+				isPlaying = false;
+			}
+		}
+
+	}
 }
 
 
