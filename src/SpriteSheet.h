@@ -48,4 +48,5 @@ private:
 	int __textureHeight;
 
 };
+
 #endif
