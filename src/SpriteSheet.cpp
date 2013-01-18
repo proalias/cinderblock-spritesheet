@@ -35,7 +35,7 @@ void SpriteSheet::draw(){
 
 	float u = frame.x;
 	float v = frame.y;
-   // v += frame.h;
+    // v += frame.h;
     //v = frame.oH - v;
     float s = u + frame.w;
     float t = v + frame.h;

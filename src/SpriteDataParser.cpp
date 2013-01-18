@@ -22,7 +22,11 @@ vector<SpriteData> SpriteDataParser::parseSpriteData(string filePath, int format
 				if (tagName == "sprite"){
 
 
-					int x, y, w, h, oX, oY, oW, oH;
+					int x, y, w, h;
+					int oX = 0;
+					int oY = 0;
+					int oW = 0;
+					int oH = 0;
 					string name;
 
 					std::list<XmlTree::Attr> attributes = iter->getAttributes();
