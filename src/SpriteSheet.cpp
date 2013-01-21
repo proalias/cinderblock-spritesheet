@@ -117,9 +117,13 @@ void SpriteSheet::update(){
 
 
 void SpriteSheet::setFrame(int frame){
-
+	__currentFrame = frame;
 }
 
 int SpriteSheet::getCurrentFrame(){
-	return 0;
+	return __currentFrame;
+}
+
+int SpriteSheet::getTotalFrames(){
+	return __totalFrames;
 }

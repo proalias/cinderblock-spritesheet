@@ -20,7 +20,7 @@ public:
 	void update();
 	void setFrame(int frameNum);
 	int getCurrentFrame();
-	void getTotalFrames();
+	int getTotalFrames();
 
 	ci::Anim<float> x;
 	ci::Anim<float> y;
