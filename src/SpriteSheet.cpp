@@ -32,7 +32,10 @@ void SpriteSheet::draw(){
 	gl::translate(x,y,0);
 	gl::rotate(rotation);
 	gl::scale(scale,scale,1.0);
-
+	if (alpha != 1.0){
+		gl::color(ColorA(1.0,1.0,1.0,alpha));
+		gl::enableAlphaBlending();
+	}
 	float u = frame.x;
 	float v = frame.y;
     // v += frame.h;
@@ -75,6 +78,9 @@ void SpriteSheet::draw(){
 	__spriteImage.disable();
 	__spriteImage.unbind();
 
+	if (alpha != 1.0){
+		gl::color(ColorA(1.0,1.0,1.0,1.0));
+	}
 
 	glDisableClientState( GL_VERTEX_ARRAY );
 	glDisableClientState( GL_TEXTURE_COORD_ARRAY );	
