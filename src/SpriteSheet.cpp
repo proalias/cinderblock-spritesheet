@@ -15,9 +15,14 @@ void SpriteSheet::init(ci::gl::Texture spriteImage, std::string xmlPath, int Dat
 		x = 0;
 		y = 0;
 		scale = 1.0;
-		rotation = 0.0;
+		rotation = 0;
 		alpha = 1.0;
+		width = __spriteData[0].w;
+		height = __spriteData[0].h;
 
+		isPlaying = true;
+		reverse = false;
+		loop = true;
 }
 
 void SpriteSheet::draw(){
@@ -30,7 +35,7 @@ void SpriteSheet::draw(){
 
 	float u = frame.x;
 	float v = frame.y;
-   // v += frame.h;
+    // v += frame.h;
     //v = frame.oH - v;
     float s = u + frame.w;
     float t = v + frame.h;
@@ -65,9 +70,8 @@ void SpriteSheet::draw(){
 	verts[3*2+0] = rect.getX1(); texCoords[3*2+0] = u/__textureWidth;;
 	verts[3*2+1] = rect.getY2(); texCoords[3*2+1] = t/__textureHeight;;
 
-	gl::color(cinder::ColorA(alpha,alpha,alpha,alpha));
 	glDrawArrays( GL_TRIANGLE_STRIP, 0, 4 );
-	gl::color(cinder::ColorA(1.0,1.0,1.0,1.0));
+
 	__spriteImage.disable();
 	__spriteImage.unbind();
 
@@ -81,15 +85,45 @@ void SpriteSheet::draw(){
 }
 
 void SpriteSheet::update(){
-	__currentFrame = (__currentFrame +=1) % __totalFrames;
+	if (isPlaying == true){
+		if (reverse == true)
+		{
+		__currentFrame = (__currentFrame -=1) % __totalFrames;
+		}
+		else if (reverse == false)
+		{
+		__currentFrame = (__currentFrame +=1) % __totalFrames;
+		}
+
+		width = __spriteData[__currentFrame].w;
+		height = __spriteData[__currentFrame].h;
+		
+		if (loop == false){
+			if (__currentFrame == __totalFrames -1){
+				isPlaying = false;
+			}
+		}
+
+		for (int i = 0;i<stopAtFrames.size();i++)
+		{
+			if (__currentFrame == stopAtFrames[i]){
+				isPlaying = false;
+			}
+		}
+
+	}
 }
 
 
 
 void SpriteSheet::setFrame(int frame){
-
+	__currentFrame = frame;
 }
 
 int SpriteSheet::getCurrentFrame(){
-	return 0;
+	return __currentFrame;
+}
+
+int SpriteSheet::getTotalFrames(){
+	return __totalFrames;
 }

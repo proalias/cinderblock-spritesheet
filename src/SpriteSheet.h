@@ -2,9 +2,9 @@
 #define SpriteSheet_h
 
 
-#include "cinder/Cinder.h"
-#include "cinder/gl/Texture.h"
-#include "cinder/Xml.h"
+#include "cinder\Cinder.h"
+#include "cinder\gl\Texture.h"
+#include "cinder\Xml.h"
 #include "cinder/Timeline.h"
 #include <stdio.h>
 
@@ -20,7 +20,7 @@ public:
 	void update();
 	void setFrame(int frameNum);
 	int getCurrentFrame();
-	void getTotalFrames();
+	int getTotalFrames();
 
 	ci::Anim<float> x;
 	ci::Anim<float> y;
@@ -28,6 +28,14 @@ public:
 	ci::Anim<float> rotation;
 	ci::Anim<float> alpha;
 
+	bool reverse;
+	bool isPlaying;
+	bool loop;
+
+	float width;
+	float height;
+
+	std::vector<int> stopAtFrames;
 
 	void init(ci::gl::Texture spriteImage, std::string xmlPath, int DataFormat);
 
@@ -40,4 +48,5 @@ private:
 	int __textureHeight;
 
 };
+
 #endif
