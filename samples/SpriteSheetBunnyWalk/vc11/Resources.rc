@@ -1,0 +1,4 @@
+#include "..\include\Resources.h"
+
+IDB_PNG1
+IDB_PNG2
