@@ -22,11 +22,11 @@ vector<SpriteData> SpriteDataParser::parseSpriteData(string filePath, int format
 				if (tagName == "sprite"){
 					
 					
-					int x, y, w, h;
-					int oX = 0;
-					int oY = 0;
-					int oW = 0;
-					int oH = 0;
+					float x, y, w, h;
+					float oX = 0.0f;
+					float oY = 0.0f;
+					float oW = 0.0f;
+					float oH = 0.0f;
 					string name;
 					
 					std::list<XmlTree::Attr> attributes = (*iter)->getAttributes();
@@ -36,28 +36,28 @@ vector<SpriteData> SpriteDataParser::parseSpriteData(string filePath, int format
 						}
 						
 						if (attr->getName()=="x"){
-							x = attr->getValue<int>();
+							x = attr->getValue<float>();
 						}
 						if (attr->getName()=="y"){
-							y = attr->getValue<int>();
+							y = attr->getValue<float>();
 						}
 						if (attr->getName()=="w"){
-							w = attr->getValue<int>();
+							w = attr->getValue<float>();
 						}
 						if (attr->getName()=="h"){
-							h = attr->getValue<int>();
+							h = attr->getValue<float>();
 						}
 						if (attr->getName()=="oX"){
-							oX = attr->getValue<int>();
+							oX = attr->getValue<float>();
 						}
 						if (attr->getName()=="oY"){
-							oY = attr->getValue<int>();
+							oY = attr->getValue<float>();
 						}
 						if (attr->getName()=="oW"){
-							oW = attr->getValue<int>();
+							oW = attr->getValue<float>();
 						}
 						if (attr->getName()=="oH"){
-							oH = attr->getValue<int>();
+							oH = attr->getValue<float>();
 						}
 					}
 					

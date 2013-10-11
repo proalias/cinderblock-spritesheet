@@ -8,16 +8,16 @@ class SpriteData{
 public:
 
 	std::string name; 
-	int x;
-	int y;
-	int w;
-	int h;
-	int oX;
-	int oY;
-	int oW;
-	int oH;
+	float x;
+	float y;
+	float w;
+	float h;
+	float oX;
+	float oY;
+	float oW;
+	float oH;
 
-	SpriteData(std::string name, int x, int y, int w, int h, int oX, int oY, int oW, int oH){
+	SpriteData(std::string name, float x, float y, float w, float h, float oX, float oY, float oW, float oH){
 			this->h = h;
 			this->w = w;
 			this->x = x;
@@ -30,14 +30,14 @@ public:
 	}
 
 	SpriteData(void){
-		h = 0;
-		w = 0;
-		x = 0;
-		y = 0;
-		oX = 0;
-		oY = 0;
-		oW = 0;
-		oH = 0;
+		h = 0.0f;
+		w = 0.0f;
+		x = 0.0f;
+		y = 0.0f;
+		oX = 0.0f;
+		oY = 0.0f;
+		oW = 0.0f;
+		oH = 0.0f;
 		name = "undefined";
 	}
 

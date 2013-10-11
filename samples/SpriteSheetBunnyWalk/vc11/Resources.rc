@@ -1,4 +1,3 @@
-#include "..\include\Resources.h"
+#include "../include/Resources.h"
 
-IDB_PNG1
-IDB_PNG2
+1	ICON	"..\\resources\\cinder_app_icon.ico"
