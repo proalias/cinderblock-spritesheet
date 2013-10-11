@@ -14,7 +14,7 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-class BunnyWalkSpriteSheetApp : public AppNative {
+class SpriteSheetBunnyWalkApp : public AppNative {
 public:
 	void setup();
 	void update();
@@ -26,7 +26,7 @@ public:
 	
 };
 
-void BunnyWalkSpriteSheetApp::setup()
+void SpriteSheetBunnyWalkApp::setup()
 {
 	
 	backgroundTexture = loadImage(loadAsset("background.png"));
@@ -46,12 +46,12 @@ void BunnyWalkSpriteSheetApp::setup()
 }
 
 
-void BunnyWalkSpriteSheetApp::update()
+void SpriteSheetBunnyWalkApp::update()
 {
 	bunnyWalk.update();
 }
 
-void BunnyWalkSpriteSheetApp::draw()
+void SpriteSheetBunnyWalkApp::draw()
 {
 	// clear out the window with white
 	gl::clear( Color( 1.0, 1.0, 1.0 ) );
@@ -62,4 +62,4 @@ void BunnyWalkSpriteSheetApp::draw()
 	
 }
 
-CINDER_APP_NATIVE( BunnyWalkSpriteSheetApp, RendererGl )
+CINDER_APP_NATIVE( SpriteSheetBunnyWalkApp, RendererGl )

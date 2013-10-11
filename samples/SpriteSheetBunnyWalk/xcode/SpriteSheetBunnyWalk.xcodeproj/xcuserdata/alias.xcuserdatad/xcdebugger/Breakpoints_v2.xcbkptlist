@@ -14,7 +14,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
-            endingLineNumber = "51">
+            endingLineNumber = "51"
+            landmarkName = "BunnyWalkSpriteSheetApp::update()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -28,7 +30,71 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
-            endingLineNumber = "56">
+            endingLineNumber = "56"
+            landmarkName = "BunnyWalkSpriteSheetApp::draw()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/SpriteSheetBunnyWalkApp.cpp"
+            timestampString = "403215396.155477"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "BunnyWalkSpriteSheetApp::setup()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/SpriteSheetBunnyWalkApp.cpp"
+            timestampString = "403215529.470898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "BunnyWalkSpriteSheetApp::setup()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpriteSheetBunnyWalkApp::setup()"
+                  moduleName = "SpriteSheetBunnyWalk"
+                  urlString = "file://localhost/Users/alias/Cinder-dev/blocks/cinderblock-spritesheet/samples/SpriteSheetBunnyWalk/src/SpriteSheetBunnyWalkApp.cpp"
+                  timestampString = "403215688.562001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpriteSheetBunnyWalkApp::setup()"
+                  moduleName = "SpriteSheetBunnyWalk"
+                  urlString = "file://localhost/Users/alias/Cinder-dev/blocks/cinderblock-spritesheet/samples/SpriteSheetBunnyWalk/src/SpriteSheetBunnyWalkApp.cpp"
+                  timestampString = "403215688.562485"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "314">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

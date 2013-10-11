@@ -17,6 +17,7 @@
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		60046D8018085C2C005737F1 /* SpriteDataParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60046D7C18085C2C005737F1 /* SpriteDataParser.cpp */; };
 		60046D8118085C2C005737F1 /* SpriteSheet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60046D7E18085C2C005737F1 /* SpriteSheet.cpp */; };
+		60FA72F8180893DD00FDA88F /* SpriteSheetBunnyWalkApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60FA72F7180893DD00FDA88F /* SpriteSheetBunnyWalkApp.cpp */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		60046D7D18085C2C005737F1 /* SpriteDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteDataParser.h; sourceTree = "<group>"; };
 		60046D7E18085C2C005737F1 /* SpriteSheet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSheet.cpp; sourceTree = "<group>"; };
 		60046D7F18085C2C005737F1 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
+		60FA72F7180893DD00FDA88F /* SpriteSheetBunnyWalkApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpriteSheetBunnyWalkApp.cpp; path = ../src/SpriteSheetBunnyWalkApp.cpp; sourceTree = "<group>"; };
 		6A6CD72E6C094A18B57900A2 /* SpriteSheetBunnyWalk_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = SpriteSheetBunnyWalk_Prefix.pch; sourceTree = "<group>"; };
 		7437BACBD0004738972E9E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SpriteSheetBunnyWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteSheetBunnyWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				60FA72F7180893DD00FDA88F /* SpriteSheetBunnyWalkApp.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60FA72F8180893DD00FDA88F /* SpriteSheetBunnyWalkApp.cpp in Sources */,
 				60046D8118085C2C005737F1 /* SpriteSheet.cpp in Sources */,
 				60046D8018085C2C005737F1 /* SpriteDataParser.cpp in Sources */,
 			);
