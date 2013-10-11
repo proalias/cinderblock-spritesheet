@@ -4,23 +4,12 @@
 	name="SpriteSheet"
 	id="com.proalias.spritesheet"
 	author="Alias Cummins"
-	summary="Sprite sheet support for Mac OS X and Windows."
+	summary="Basic sprite sheet support for Mac OS X, iOS and Windows."
 	>
 	<supports os="msw" />
 	<supports os="macosx" />
 	<includePath>include</includePath>
 	<source>src/SpriteSheet.cpp</source>
 	<header>src/SpriteSheet.h</header>
-	<platform os="macosx">
-		<staticLibrary>lib/macosx/libcairo.a</staticLibrary>
-		<staticLibrary>lib/macosx/libpixman-1.a</staticLibrary>
-		<staticLibrary>lib/macosx/libpng14.a</staticLibrary>		
-		<includePath system="true">include/macosx</includePath>
-	</platform>
-	<platform os="msw">
-		<staticLibrary>lib/msw/cairo-static.lib</staticLibrary>
-		<staticLibrary>lib/msw/pixman-1.lib</staticLibrary>
-		<includePath>include/msw</includePath>	
-	</platform>
 </block>
 </cinder>
