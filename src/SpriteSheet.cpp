@@ -44,7 +44,6 @@ void SpriteSheet::draw(){
     float t = v + frame.h;
 
 
-	bool textureRectangle = true;
 	ci::Rectf rect(frame.oX,frame.oY,frame.oX+frame.w, frame.oY+frame.h);
 
 

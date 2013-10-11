@@ -1,7 +1,7 @@
 #ifndef SpriteData_h
 #define SpriteData_h
 
-#include "cinder\Cinder.h"
+#include "cinder/Cinder.h"
 #include <stdio.h>
 
 class SpriteData{
