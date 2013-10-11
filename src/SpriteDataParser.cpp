@@ -13,11 +13,11 @@ vector<SpriteData> SpriteDataParser::parseSpriteData(string filePath, int format
 
 		for( XmlTree::ConstIter item = mainXml.begin(); item != mainXml.end(); ++item ) {
 
-			std::list<XmlTree> children = item->getChildren();
+			const XmlTree::Container &children = item->getChildren(); // item->getChildren();
 
-			for (std::list<XmlTree>::iterator iter = children.begin();iter != children.end(); iter ++){
+			for (XmlTree::Container::const_iterator iter = children.begin(); iter != children.end(); iter ++){
 
-				std::string tagName = iter->getTag();
+				std::string tagName = (*iter)->getTag();
 
 				if (tagName == "sprite"){
 
@@ -29,7 +29,7 @@ vector<SpriteData> SpriteDataParser::parseSpriteData(string filePath, int format
 					int oH = 0;
 					string name;
 
-					std::list<XmlTree::Attr> attributes = iter->getAttributes();
+					std::list<XmlTree::Attr> attributes = (*iter)->getAttributes();
 					for(std::list<XmlTree::Attr>::iterator attr = attributes.begin();attr != attributes.end();attr ++){
 						if (attr->getName()=="n"){
 							name = attr->getValue();
