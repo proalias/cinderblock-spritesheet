@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>07214B24-9536-46B7-A25F-C5504B7053A5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SpriteSheetBunnyWalk</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>361E401A-F91D-4EA8-A461-EAE405BA02C4</key>
+		<string>ssh://github.com/proalias/cinderblock-spritesheet.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>samples/SpriteSheetBunnyWalk/xcode/SpriteSheetBunnyWalk.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>361E401A-F91D-4EA8-A461-EAE405BA02C4</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/proalias/cinderblock-spritesheet.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>361E401A-F91D-4EA8-A461-EAE405BA02C4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>361E401A-F91D-4EA8-A461-EAE405BA02C4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cinderblock-spritesheet</string>
+		</dict>
+	</array>
+</dict>
+</plist>
