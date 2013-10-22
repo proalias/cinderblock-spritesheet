@@ -11,5 +11,7 @@
 	<includePath>src</includePath>
 	<source>src/SpriteSheet.cpp</source>
 	<header>src/SpriteSheet.h</header>
+	<source>src/SpriteDataParser.cpp</source>
+	<header>src/SpriteDataParser.h</header>
 </block>
 </cinder>
