@@ -9,7 +9,7 @@
 
 class SpriteDataParser{
 public:
-	static std::vector<SpriteData> parseSpriteData(std::string filePath, int format);
+	static std::vector<SpriteData> parseSpriteData(ci::XmlTree xml, int format);
 
 private:
 	static ci::XmlTree spriteXml;

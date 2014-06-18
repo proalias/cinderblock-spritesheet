@@ -36,13 +36,13 @@ public:
 	float height;
 
 	std::vector<int> stopAtFrames;
-
-	void init(ci::gl::Texture spriteImage, std::string xmlPath, int DataFormat);
+	
+	void init(ci::gl::TextureRef spriteImage, ci::XmlTree xml, int DataFormat = FORMAT_TEXTUREPACKER_GENERIC_XML);
 
 private:
 	int __currentFrame;
 	int __totalFrames;
-	ci::gl::Texture __spriteImage;
+	ci::gl::TextureRef __spriteImage;
 	std::vector<SpriteData> __spriteData;
 	int __textureWidth;
 	int __textureHeight;

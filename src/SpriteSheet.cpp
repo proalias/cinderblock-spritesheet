@@ -3,26 +3,25 @@
 using namespace std;
 using namespace ci;
 
+void SpriteSheet::init(ci::gl::TextureRef spriteImage, ci::XmlTree xml, int DataFormat){
+	__spriteData = SpriteDataParser::parseSpriteData(xml, DataFormat);
+	__spriteImage = spriteImage;
+	__currentFrame = 0;
+	__totalFrames = __spriteData.size();
+	__textureWidth = spriteImage->getWidth();
+	__textureHeight = spriteImage->getHeight();
 
-void SpriteSheet::init(ci::gl::Texture spriteImage, std::string xmlPath, int DataFormat){
-		__spriteData = SpriteDataParser::parseSpriteData(xmlPath, DataFormat);
-		__spriteImage = spriteImage;
-		__currentFrame = 0;
-		__totalFrames = __spriteData.size();
-		__textureWidth = spriteImage.getWidth();
-		__textureHeight = spriteImage.getHeight();
+	x = 0;
+	y = 0;
+	scale = 1.0;
+	rotation = 0;
+	alpha = 1.0;
+	width = __spriteData[0].w;
+	height = __spriteData[0].h;
 
-		x = 0;
-		y = 0;
-		scale = 1.0;
-		rotation = 0;
-		alpha = 1.0;
-		width = __spriteData[0].w;
-		height = __spriteData[0].h;
-
-		isPlaying = true;
-		reverse = false;
-		loop = true;
+	isPlaying = true;
+	reverse = false;
+	loop = true;
 }
 
 void SpriteSheet::draw(){
@@ -54,7 +53,7 @@ void SpriteSheet::draw(){
 	GLfloat texCoords[8];
 	glTexCoordPointer( 2, GL_FLOAT, 0, texCoords );
 
-	__spriteImage.enableAndBind();
+	__spriteImage->enableAndBind();
 
 	//top right
 	verts[0*2+0] = rect.getX2(); texCoords[0*2+0] = s/__textureWidth;;
@@ -74,8 +73,8 @@ void SpriteSheet::draw(){
 
 	glDrawArrays( GL_TRIANGLE_STRIP, 0, 4 );
 
-	__spriteImage.disable();
-	__spriteImage.unbind();
+	__spriteImage->disable();
+	__spriteImage->unbind();
 
 	if (alpha != 1.0){
 		gl::color(ColorA(1.0,1.0,1.0,1.0));
