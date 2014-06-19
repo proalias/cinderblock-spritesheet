@@ -33,8 +33,10 @@ void SpriteSheet::draw(){
 	gl::scale(scale,scale,1.0);
 	if (alpha != 1.0){
 		gl::color(ColorA(1.0,1.0,1.0,alpha));
-		gl::enableAlphaBlending();
 	}
+	
+	gl::enableAlphaBlending();
+	
 	float u = frame.x;
 	float v = frame.y;
     // v += frame.h;
