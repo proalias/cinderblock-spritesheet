@@ -4,6 +4,8 @@ using namespace std;
 using namespace ci;
 
 void SpriteSheet::init(ci::gl::TextureRef spriteImage, ci::XmlTree xml, int DataFormat){
+    
+    
 	__spriteData = SpriteDataParser::parseSpriteData(xml, DataFormat);
 	__spriteImage = spriteImage;
 	__currentFrame = 0;
@@ -18,6 +20,8 @@ void SpriteSheet::init(ci::gl::TextureRef spriteImage, ci::XmlTree xml, int Data
 	alpha = 1.0;
 	width = __spriteData[0].w;
 	height = __spriteData[0].h;
+//    width   = xml.getChild("TextureAtlas").getAttributeValue<int>("width");
+//    height  = xml.getChild("TextureAtlas").getAttributeValue<int>("height");
 
 	isPlaying = true;
 	reverse = false;
@@ -31,9 +35,9 @@ void SpriteSheet::draw(){
 	gl::translate(x,y,0);
 	gl::rotate(rotation);
 	gl::scale(scale,scale,1.0);
-	if (alpha != 1.0){
-		gl::color(ColorA(1.0,1.0,1.0,alpha));
-	}
+//	if (alpha != 1.0){
+//		gl::color(ColorA(1.0,1.0,1.0,alpha));
+//	}
 	
 	gl::enableAlphaBlending();
 	
