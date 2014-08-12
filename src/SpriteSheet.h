@@ -34,6 +34,10 @@ public:
 
 	float width;
 	float height;
+    float oWidth;
+    float oHeight;
+    
+    int oX, oY;
 
 	std::vector<int> stopAtFrames;
 	

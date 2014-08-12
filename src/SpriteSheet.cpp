@@ -32,9 +32,9 @@ void SpriteSheet::draw(){
 	SpriteData frame = __spriteData[__currentFrame];
 	
 	gl::pushMatrices();
-	gl::translate(x,y,0);
-	gl::rotate(rotation);
-	gl::scale(scale,scale,1.0);
+//	gl::translate(x,y,0);
+//	gl::rotate(rotation);
+//	gl::scale(scale,scale,1.0);
 //	if (alpha != 1.0){
 //		gl::color(ColorA(1.0,1.0,1.0,alpha));
 //	}
@@ -82,9 +82,9 @@ void SpriteSheet::draw(){
 	__spriteImage->disable();
 	__spriteImage->unbind();
 
-	if (alpha != 1.0){
-		gl::color(ColorA(1.0,1.0,1.0,1.0));
-	}
+//	if (alpha != 1.0){
+//		gl::color(ColorA(1.0,1.0,1.0, alpha));
+//	}
 
 	glDisableClientState( GL_VERTEX_ARRAY );
 	glDisableClientState( GL_TEXTURE_COORD_ARRAY );	
@@ -120,7 +120,14 @@ void SpriteSheet::update(){
 				isPlaying = false;
 			}
 		}
-
+        
+        width   = __spriteData[__currentFrame].w;
+        height  = __spriteData[__currentFrame].h;
+        oWidth  = __spriteData[__currentFrame].oW;
+        oHeight = __spriteData[__currentFrame].oH;
+        
+        oX  = __spriteData[__currentFrame].oX;
+        oY  = __spriteData[__currentFrame].oY;
 	}
 }
 
