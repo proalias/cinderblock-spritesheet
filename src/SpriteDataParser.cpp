@@ -3,8 +3,8 @@
 using namespace std;
 using namespace ci;
 
-vector<SpriteData> SpriteDataParser::parseSpriteData(string filePath, int format){
-	cinder::XmlTree mainXml( ci::app::loadAsset( filePath ) );
+std::vector<SpriteData> SpriteDataParser::parseSpriteData(ci::XmlTree xml, int format){
+	ci::XmlTree mainXml = xml;
 	
 	vector<SpriteData> spriteData;
 	
